@@ -14,13 +14,7 @@ Requirements:
 ------
   * Java 7 
   * Tableau Extract API "bin" directory added to the PATH system variable
-  
-To Run:
----
->     java -jar smartsheet-tableau.jar [accessToken] [sheetIDs]
-   *[accessToken]* Required. A user-generated access token created through the Account > Personal Settings > API Access menu.
-   *[sheetIDs]*  Optional. A comma-separated list of sheet IDs. These can be found in "Properties" menu found by right-clicking a
-   sheet in the Home tab.
+  * Apache Ant
 
 To build this project: 
 --
@@ -29,6 +23,16 @@ To build this project, you must have [Apache Ant](http://ant.apache.org/) instal
 >     ant 
 
 This will generate smartsheet-tableau.jar, which is the only jar file you will need.
+
+
+To Run:
+---
+
+>     java -jar smartsheet-tableau.jar [accessToken] [sheetIDs]
+>     
+>     [accessToken] Required. A user-generated access token created through the Account > Personal Settings > API Access menu.
+>     [sheetIDs]    Optional. A comma-separated list of sheet IDs. These can be found in "Properties" menu found by right-clicking a sheet in the Home tab.
+
 
 Usage Scenarios:
 ---
