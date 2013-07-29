@@ -14,7 +14,7 @@ Requirements:
 ------
   * Java 7 
   * Tableau Extract API "bin" directory added to the PATH system variable
-  * Apache Ant
+  * Apache Ant (required to build. compiled jar file can be found [here](https://www.smartsheet.com/developers/apps)
 
 To build this project: 
 --
@@ -22,7 +22,7 @@ To build this project, you must have [Apache Ant](http://ant.apache.org/) instal
     
 >     ant 
 
-This will generate smartsheet-tableau.jar, which is the only jar file you will need.
+This will generate smartsheet-tableau.jar, which is the only jar file you will need, also available [here](https://www.smartsheet.com/developers/apps).
 
 
 To Run:
@@ -44,4 +44,4 @@ This tool can be used to periodically export Smartsheet data to the Tableau Serv
 
 Once the server has imported the data, you can use Tableau Desktop to connect to the TDEs as a Tableau Server data source. Once you create your visualizations and publish them, you can periodically run this script and re-import the data, which will automatically update the visualizations.
 
-Note that this solution may require customization to meet your needs, since this only exports a single user's sheets, and exports all of them. **Add note here about security and data privacy**  
+Note that this solution may require customization to meet your needs, since this only exports a single user's sheets, and exports all of them. 
