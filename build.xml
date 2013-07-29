@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project smartsheet-tableau-extract with Jar-in-Jar Loader">
+	<path id="classpath">
+		<fileset dir="lib" includes="**/*.jar" />
+	</path>
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+
+	<target name="compile">
+		<mkdir dir="build/classes" />
+		<javac srcdir="src" destdir="build/classes" classpathref="classpath" />
+	</target>
+	<target name="create_run_jar" depends="clean,compile">
+		<jar destfile="smartsheet-tableau.jar">
+			<manifest>
+				<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader" />
+				<attribute name="Rsrc-Main-Class" value="com.smartsheet.platform.tableau.SmartsheetExtractor" /> 
+				<!-- <attribute name="Rsrc-Main-Class" value="SampleExtract" /> --> 
+				<attribute name="Class-Path" value="." />
+				<attribute name="Rsrc-Class-Path" value="./ commons-logging-1.1.1.jar dataextract.jar httpclient-4.2.5.jar httpcore-4.2.4.jar jackson-core-asl-1.9.0.jar jackson-mapper-asl-1.9.0.jar jna.jar" />
+			</manifest>
+			<zipfileset src="lib/jar-in-jar-loader.zip" />
+			<fileset dir="target" />
+			<zipfileset dir="lib" includes="commons-logging-1.1.1.jar" />
+			<zipfileset dir="lib" includes="dataextract.jar" />
+			<zipfileset dir="lib" includes="httpclient-4.2.5.jar" />
+			<zipfileset dir="lib" includes="httpcore-4.2.4.jar" />
+			<zipfileset dir="lib" includes="jackson-core-asl-1.9.0.jar" />
+			<zipfileset dir="lib" includes="jackson-mapper-asl-1.9.0.jar" />
+			<zipfileset dir="lib" includes="jna.jar" />
+		</jar>
+	</target>
+</project>
