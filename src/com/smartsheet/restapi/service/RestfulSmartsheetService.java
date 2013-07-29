@@ -33,7 +33,7 @@ import com.smartsheet.utils.HttpUtils;
  */
 public class RestfulSmartsheetService implements SmartsheetService {
 
-    private static final String API_BASE_URL = "http://kyans.smartsheet.com:8080/dev2/rest/1.1/";
+    private static final String API_BASE_URL = "https://api.smartsheet.com/1.1/";
 
     private final String accessToken;
     private String assumedUserEmail;
