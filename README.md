@@ -1,5 +1,10 @@
 
-###Copyright 2013 Smartsheet.com
+Smartsheet Tableau Extract Utility
+===
+
+License and Warranty
+--------------------
+Copyright 2013 Smartsheet.com
 
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,44 +20,46 @@ See the License for the specific language governing permissions and
 limitations under the License.
  
 
-
-Smartsheet Tableau Extract Tool
-=============
-
-This project is a functioning example of how you can extract data from Smartsheet into a Tableau Data Extract (TDE) format.
-
-**NOTE**: This will extract *ALL* sheets viewable by the user that generates the access token.
-
-Before You Begin:
-------
->You will need to download the Tableau DataExtract API from their [website](http://www.tableausoftware.com/data-extract-api).
+Overview
+--------
 
 
-Requirements:
-------
-  * Java 7 
-  * Tableau Extract API "bin" directory added to the PATH system variable
-  * Apache Ant (required to build. compiled jar file can be found [here](https://www.smartsheet.com/developers/apps)
+This command-line utility extracts data from Smartsheet into a Tableau Data Extract (TDE) format.
 
-To build this project: 
---
-To build this project, you must have [Apache Ant](http://ant.apache.org/) installed. cd to the root folder, and run:
-    
->     ant 
-
-This will generate smartsheet-tableau.jar, which is the only jar file you will need, also available [here](https://www.smartsheet.com/developers/apps).
+You can use this utility to perform a one-off export of your Smartsheet data so you can analyze and review it in Tableau, or set up a recurring job to periodically refresh a Tableau dataset that is available to your entire team. 
 
 
-To Run:
+Building
 ---
+If you are looking for instructions to run the utility, skip this section and go directly to "Usage".
 
->     java -jar smartsheet-tableau.jar [accessToken] [sheetIDs]
->     
->     [accessToken] Required. A user-generated access token created through the Account > Personal Settings > API Access menu.
->     [sheetIDs]    Optional. A comma-separated list of sheet IDs. These can be found in "Properties" menu found by right-clicking a sheet in the Home tab.
+* Make sure you have Java 7 installed.
+* Make sure you have [Apache Ant](http://ant.apache.org/) installed. 
+* Change directory to the root of the project and run <code>ant</code> to build.
+
+This will generate <code>smartsheet-tableau.jar</code>, which is the only jar file you will need, also available for download [here](https://www.smartsheet.com/developers/apps).
 
 
-Usage Scenarios:
+
+Usage
+------
+* This utility will only run on Windows (XP or later required) because Tableau currently only supports Windows.
+* Make sure you have Java 7 installed.
+* Download the Tableau DataExtract API from the [Tableau website](http://www.tableausoftware.com/data-extract-api).
+* Add the Tableau Extract API "bin" directory to your PATH system variable.
+* Generate a Smartsheet API access token - see [the Smartsheet API docs](http://smartsheet.com/developers/api-faq) for intructions.
+
+Now you are ready to run the utility.  To run, execute the following command:
+
+	java -jar smartsheet-tableau.jar [accessToken] [sheetIDs]
+
+* [accessToken] 	Required. A user-generated access token created through the Account > Personal Settings > API Access menu.
+* [sheetIDs]    Optional. A comma-separated list of sheet IDs. These can be found in "Properties" menu by right-clicking a sheet in the Home tab - see this [Smartsheet Help Center article](http://help.smartsheet.com/customer/portal/articles/1205389-sheet-properties) for more information.
+	
+<b>IMPORTANT</b>: if you don't provide a list of sheet IDs, <b>ALL</b> of the user's sheets will be exported. 
+
+
+Usage Scenarios
 ---
 ###Personal export
 Run this tool on your local computer and get all of your Sheets exported. You can then import the TDEs into Tableau Desktop and work with the data from there.
