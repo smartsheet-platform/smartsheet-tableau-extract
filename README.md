@@ -74,3 +74,5 @@ This tool can be used to periodically export Smartsheet data to the Tableau Serv
 Once the server has imported the data, you can use Tableau Desktop to connect to the TDEs as a Tableau Server data source. Once you create your visualizations and publish them, you can periodically run this script and re-import the data, which will automatically update the visualizations.
 
 Note that this solution may require customization to meet your needs, since this only exports a single user's sheets, and exports all of them. 
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/6f98423b0c8381a4d6c388aadb694aa7 "githalytics.com")](http://githalytics.com/smartsheet-platform/smartsheet-tableau-extract)
