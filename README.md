@@ -28,7 +28,7 @@ Overview
 --------
 
 
-This command-line utility extracts data from Smartsheet into a Tableau Data Extract (TDE) format.
+This Windows command-line utility extracts data from Smartsheet into a Tableau Data Extract (TDE) format.
 
 You can use this utility to perform a one-off export of your Smartsheet data so you can analyze and review it in Tableau, or set up a recurring job to periodically refresh a Tableau dataset that is available to your entire team. 
 
@@ -49,11 +49,12 @@ Usage
 ------
 * This utility will only run on Windows (XP or later required) because Tableau currently only supports Windows.
 * Make sure you have Java 7 installed.
+* Download the precompiled <code>smartsheet-tableau.jar</code> file [here](https://www.smartsheet.com/developers/apps), or build it by following the instructions in "Building".
 * Download the Tableau DataExtract API from the [Tableau website](http://www.tableausoftware.com/data-extract-api).
-* Add the Tableau Extract API "bin" directory to your PATH system variable.
+* Add the Tableau Extract API "bin" directory to your Windows PATH system/environment variable.
 * Generate a Smartsheet API access token - see [the Smartsheet API docs](http://smartsheet.com/developers/api-faq) for intructions.
 
-Now you are ready to run the utility.  To run, execute the following command:
+Now you are ready to run the utility.  To run, execute the following command via the Windows command line prompt:
 
 	java -jar smartsheet-tableau.jar [accessToken] [sheetIDs]
 
