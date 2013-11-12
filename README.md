@@ -27,10 +27,15 @@ file for details.
 Overview
 --------
 
-
 This Windows command-line utility extracts data from Smartsheet into a Tableau Data Extract (TDE) format.
 
 You can use this utility to perform a one-off export of your Smartsheet data so you can analyze and review it in Tableau, or set up a recurring job to periodically refresh a Tableau dataset that is available to your entire team. 
+
+
+Revision History
+--------
+
+1.0 - July 29 2013 - Initial build.w
 
 
 Building
