@@ -35,7 +35,8 @@ You can use this utility to perform a one-off export of your Smartsheet data so 
 Revision History
 --------
 
-1.0 - July 29 2013 - Initial build.w
+1.0 - July 29 2013 - Initial build
+1.1 - November 27 2013 - Fix exception on null cell value
 
 
 Building
