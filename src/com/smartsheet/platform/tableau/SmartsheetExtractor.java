@@ -133,7 +133,12 @@ public class SmartsheetExtractor {
 								if (cell.getValue() != null) {
 									//There is a bug in the Tableau DataExtract API that assumes the default charset is UTF-8.
 									//We convert it from default to UTF-8 to avoid an error.
-									String val = new String(cell.getDisplayValue().getBytes(Charset.defaultCharset()), "UTF-8");
+									String val = null;
+									if (cell.getDisplayValue() != null) {
+										val = new String(cell.getDisplayValue().getBytes(Charset.defaultCharset()), "UTF-8");
+									} else {
+										val = "";
+									}
 									tableauRow.setCharString(columnNumber, val);
 								}
 								break;
