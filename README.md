@@ -57,7 +57,7 @@ Usage
 * Make sure you have Java 7 installed.
 * Download the precompiled <code>smartsheet-tableau.jar</code> Java JAR file [here](https://www.smartsheet.com/developers/apps), or build it by following the instructions in "Building".
 * Download the Tableau Data Extract API (for Java) from the [Tableau website](http://www.tableausoftware.com/data-extract-api).
-* Add the Tableau Data Extract API "bin" directory to your Windows PATH system/environment variable.
+* Add the Tableau Data Extract API "bin" directory to your Windows PATH system/environment variable (see http://www.java.com/en/download/help/path.xml for instructions).
 * Generate a Smartsheet API access token - see [the Smartsheet API docs](http://smartsheet.com/developers/api-faq) for intructions.
 
 Now you are ready to run the utility.  To run, execute the following command via the Windows command line prompt:
