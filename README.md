@@ -47,7 +47,7 @@ If you are looking for instructions to run the utility, skip this section and go
 * Make sure you have [Apache Ant](http://ant.apache.org/) installed. 
 * Change directory to the root of the project and run <code>ant</code> to build.
 
-This will generate <code>smartsheet-tableau.jar</code>, which is the only jar file you will need, also available for download [here](https://www.smartsheet.com/developers/apps).
+This will generate <code>smartsheet-tableau.jar</code>, which is the only jar file you will need, also available for download [here](https://googledrive.com/host/0BzPTof2spscfOVpkVjU4SXViM3M/smartsheet-tableau-1.2.jar).
 
 
 
@@ -55,7 +55,7 @@ Usage
 ------
 * This utility will only run on Windows (XP or later required) because Tableau currently only supports Windows.
 * Make sure you have Java 7 installed.
-* Download the precompiled <code>smartsheet-tableau.jar</code> Java JAR file [here](https://www.smartsheet.com/developers/apps), or build it by following the instructions in "Building".
+* Download the precompiled <code>smartsheet-tableau.jar</code> Java JAR file [here](https://googledrive.com/host/0BzPTof2spscfOVpkVjU4SXViM3M/smartsheet-tableau-1.2.jar), or build it by following the instructions in "Building".
 * Download the Tableau Data Extract API (for Java) from the [Tableau website](http://www.tableausoftware.com/data-extract-api).
 * Add the Tableau Data Extract API "bin" directory to your Windows PATH system/environment variable (see http://www.java.com/en/download/help/path.xml for instructions).
 * Generate a Smartsheet API access token - see [the Smartsheet API docs](http://smartsheet.com/developers/api-faq) for intructions.
