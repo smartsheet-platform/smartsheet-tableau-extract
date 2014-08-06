@@ -66,7 +66,12 @@ Now you are ready to run the utility.  To run, execute the following command via
 
 * [accessToken] 	Required. A user-generated access token created through the Account > Personal Settings > API Access menu.
 * [sheetIDs]    Optional. A comma-separated list of sheet IDs. These can be found in "Properties" menu by right-clicking a sheet in the Home tab - see this [Smartsheet Help Center article](http://help.smartsheet.com/customer/portal/articles/1205389-sheet-properties) for more information.
-	
+* Note: when running the export, be sure you are in a directory that you can write to. If you attempt to run in a read-only directory (such as C:\ or C:\Program Files, etc) you will see the following:
+   <code>com.tableausoftware.TableauException: Invalid Extract handle</code>.You can solve this one of two ways:
+  1. From the start menu, search for “cmd” and right click and run as administrator. Continue as before. or
+  2. Move the Jar file to a different directory, such as C:\tableau-extract (you’d have to create this directory of course) and run the tool from there.
+
+
 <b>IMPORTANT</b>: if you don't provide a list of sheet IDs, <b>ALL</b> of the user's sheets will be exported. 
 
 
