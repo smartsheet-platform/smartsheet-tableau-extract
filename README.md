@@ -1,6 +1,9 @@
 
 Smartsheet Tableau Extract Utility
 ===
+# NOTE: This repo is only for historic purposes.
+
+If you wish to view Smartsheet data in Tableau, please refer to the ODBC connector: https://www.smartsheet.com/apps/smartsheet-odbc
 
 License and Warranty
 --------------------
